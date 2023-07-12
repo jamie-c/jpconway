@@ -1,6 +1,11 @@
+import HeadingOne from "@/components/HeadingOne"
+
 const Posts = () => {
     return (
-        <div>My Posts</div>
+        <>
+            <HeadingOne title="My Posts" />
+            <p>(coming soon...)</p>
+        </>
     )
 }
 

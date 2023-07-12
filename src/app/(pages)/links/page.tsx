@@ -1,6 +1,11 @@
+import HeadingOne from "@/components/HeadingOne"
+
 const Links = () => {
     return (
-        <div>My Links</div>
+        <>
+            <HeadingOne title="My Links" />
+            <p>(coming soon...)</p>
+        </>
     )
 }
 

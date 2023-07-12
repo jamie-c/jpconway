@@ -1,6 +1,6 @@
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import './globals.css'
+import Footer from '../../components/Footer'
+import Header from '../../components/Header'
+import '../globals.css'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,7 +18,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <main className='min-h-100 w-100 flex flex-col items-center pb-10'
+                <Header />
+                <main className='min-h-[calc(100vh-4rem)] w-100 flex flex-col items-center pb-10'
                 >
                     {children}
                 </main>

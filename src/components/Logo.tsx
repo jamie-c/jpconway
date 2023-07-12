@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { NextPage } from "next";
+import { NextPage } from "next"
 
 type Props = {
     txtSize: string,
@@ -22,7 +21,7 @@ const Logo: NextPage<Props> = ({ txtSize, bold }) => {
             </a>
         </h1>
     </div>
-    );
-};
+    )
+}
 
-export default Logo;
+export default Logo

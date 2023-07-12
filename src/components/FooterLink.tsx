@@ -1,5 +1,5 @@
-import { NextPage } from "next";
-import Link from "next/link";
+import { NextPage } from "next"
+import Link from "next/link"
 
 type Props = {
     title: string,
@@ -33,6 +33,6 @@ const FooterLink: NextPage<Props> = ({ title, url }) => {
         )
     }
 
-};
+}
 
-export default FooterLink;
+export default FooterLink

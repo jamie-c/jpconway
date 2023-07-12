@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { NextPage } from "next";
+import Link from "next/link"
+import { NextPage } from "next"
 
 type Props = {
     title: string,
@@ -14,6 +14,6 @@ const NavItem: NextPage<Props> = ({ title, url } ) => {
             >
                 {title}
             </Link>
-};
+}
 
-export default NavItem;
+export default NavItem

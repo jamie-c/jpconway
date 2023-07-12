@@ -1,7 +1,7 @@
-import NavItem from "./NavItem";
+import NavItem from "./NavItem"
 
 const NavLinks = () => {
-    const mainNavItems = [['About', '/about'], ['Posts', '/posts'], ['Skills', '/skills'], ['Links', '/links']];
+    const mainNavItems = [['About', '/about'], ['Posts', '/posts'], ['Skills', '/skills'], ['Links', '/links']]
 
     return (
         <span>
@@ -11,7 +11,7 @@ const NavLinks = () => {
                 ))}
             </nav>
         </span>
-    );
-};
+    )
+}
 
-export default NavLinks;
+export default NavLinks

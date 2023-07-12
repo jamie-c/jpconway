@@ -1,4 +1,4 @@
-import FooterLinks from "./FooterLinks";
+import FooterLinks from "./FooterLinks"
 
 const Footer = () => {
     return (
@@ -10,6 +10,6 @@ const Footer = () => {
             </span>
         </footer>
     )
-};
+}
 
-export default Footer;
+export default Footer

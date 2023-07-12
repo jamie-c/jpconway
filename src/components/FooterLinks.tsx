@@ -11,7 +11,7 @@ const FooterLinks = () => {
             <h2 className="text-2xl">Jamie Conway</h2>
             {footerMainLinks.map(footerMainLink => {
                 let [title, url] = footerMainLink;
-                return (<FooterLink title={title} url={url} />);
+                return (<FooterLink key={title} title={title} url={url} />);
             })}
         </div>
     );

@@ -1,7 +1,8 @@
 import NavItem from "./NavItem"
 
-const NavLinks = () => {
-    const mainNavItems = [['About', '/about'], ['Posts', '/posts'], ['Skills', '/skills'], ['Links', '/links']]
+const mainNavItems = [['About', '/about'], ['Posts', '/posts'], ['Skills', '/skills'], ['Links', '/links']]
+
+const NavLinksHorizontal = () => {
 
     return (
         <span>
@@ -14,4 +15,17 @@ const NavLinks = () => {
     )
 }
 
-export default NavLinks
+export const NavLinksVertical = () => {
+
+    return (
+        <span>
+            <nav className="flex flex-col justify-start items-end gap-8 text-5xl text-[#2f2f30] pt-10 pr-8">
+                {mainNavItems.map(([ title, url ]) => (
+                    <NavItem key={title} title={title} url={url} />
+                ))}
+            </nav>
+        </span>
+    )
+}
+
+export default NavLinksHorizontal

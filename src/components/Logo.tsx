@@ -15,11 +15,11 @@ const Logo: NextPage<Props> = ({ txtSize, bold }) => {
     return (
     <div>
         <h1 className={finalClassNames}>
-            <Link 
+            <a 
                 href="/"
             >
                 Jamie Conway!
-            </Link>
+            </a>
         </h1>
     </div>
     );

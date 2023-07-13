@@ -9,13 +9,14 @@ import HamburgerIcon from "./icons/HamburgerIcon"
 const Header = () => {
 
     const headerClassNames = {
-        navLinksHidden: "sticky top-0 sm:relative w-screen z-40 bg-opacity-60 bg-white backdrop-filter backdrop-blur-lg transition box-shadow ease",
-        navLinksVisible: "fixed top-0 sm:relative w-screen h-screen z-40 bg-opacity-60 bg-white backdrop-filter backdrop-blur-lg transition box-shadow ease"
+        navLinksHidden: "sticky top-0 w-screen z-40 bg-opacity-60 bg-white backdrop-filter backdrop-blur-lg transition box-shadow ease",
+        navLinksVisible: "fixed top-0 w-screen h-screen z-40 bg-opacity-60 bg-white backdrop-filter backdrop-blur-lg transition box-shadow ease"
     }
 
     const [ toggleHam, setToggleHam ] = useState(false)
-    const [ headerClass, setHeaderClass ] = useState("")
+    const [ headerClass, setHeaderClass ] = useState(headerClassNames.navLinksHidden)
     const active = toggleHam ? 'active' : ''
+    const windowWidth = window.outerWidth
 
     const handleHamburgerIconClick = () => {
         setToggleHam(!toggleHam)

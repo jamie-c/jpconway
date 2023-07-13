@@ -16,7 +16,6 @@ const Header = () => {
     const [ toggleHam, setToggleHam ] = useState(false)
     const [ headerClass, setHeaderClass ] = useState(headerClassNames.navLinksHidden)
     const active = toggleHam ? 'active' : ''
-    const windowWidth = window.outerWidth
 
     const handleHamburgerIconClick = () => {
         setToggleHam(!toggleHam)

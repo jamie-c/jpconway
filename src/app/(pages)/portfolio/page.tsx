@@ -1,12 +1,12 @@
 import HeadingOne from "@/components/HeadingOne"
 
-const Links = () => {
+const Portfolio = () => {
     return (
         <>
-            <HeadingOne title="My Links" />
+            <HeadingOne title="My Portfolio" />
             <p>(coming soon...)</p>
         </>
     )
 }
 
-export default Links
+export default Portfolio

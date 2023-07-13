@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import dayjs from 'dayjs';
 
 const postsDirectory = path.join(process.cwd(), 'src', 'data');
 
@@ -18,6 +19,8 @@ export function getSortedPostsData() {
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
+
+    matterResult.data.date = dayjs(matterResult.data.date).format("YYYY-MM-DD")
 
     // Combine the data with the id
     return {

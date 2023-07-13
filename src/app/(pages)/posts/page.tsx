@@ -17,11 +17,10 @@ const Posts = async () => {
     console.log("🚀 ~ file: page.tsx:16 ~ Posts ~ data:", data)
 
     return (
-        <>
-            <HeadingOne title="My Posts" />
+        <div id="about" className="px-8 md:px-24 lg:px-48 max-w-7xl">
+            <HeadingOne title="Posts" />
             {/* Add this <section> tag below the existing <section> tag */}
-            <section >
-                <h2 >Blog</h2>
+            <section id="posts">
                 <ul >
                     <li>Testing postsData</li>
                     
@@ -38,7 +37,7 @@ const Posts = async () => {
                     )})}
                 </ul>
             </section>
-        </>
+        </div>
     )
 }
 

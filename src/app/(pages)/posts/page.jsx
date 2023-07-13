@@ -1,6 +1,8 @@
 import HeadingOne from "@/components/HeadingOne"
 import { getSortedPostsData } from "../../../lib/posts"
 import dayjs from 'dayjs'
+import PostDate from "@/components/postComponents/PostDate"
+import PostYear from "@/components/postComponents/PostYear"
 
 async function getData() {
     const allPostsData = getSortedPostsData()
@@ -26,14 +28,17 @@ const Posts = async () => {
                         const year = dayjs(date).year()
                         const month = dayjs(date).month()
                         const day = dayjs(date).day()
+                        const dateFormatted = dayjs(date).format('YYYY-MM-DD')
                         
                         return (
                         <li key={id}>
+                            <PostYear date={date} />
+                            <br />
                             {title}
                             <br />
                             {id}
                             <br />
-                            {date}
+                            <PostDate date={date} />
                         </li>
                     )})}
                 </ul>

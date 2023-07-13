@@ -1,6 +1,6 @@
 import NavItem from "./NavItem"
 
-const mainNavItems = [['About', '/about'], ['Posts', '/posts'], ['Skills', '/skills'], ['Links', '/links']]
+const mainNavItems = [['About', '/about'], ['Posts', '/posts'], ['Skills', '/skills'], ['Portfolio', '/portfolio']]
 
 const NavLinksHorizontal = () => {
 

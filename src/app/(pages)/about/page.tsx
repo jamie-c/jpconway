@@ -10,11 +10,10 @@ const About = () => {
                     className="w-full sm:w-80 md:w-80 rotate-0 sm:rotate-2 relative float-none sm:float-right mb-8 sm:ml-11"
                 >
                     <Image
-                        className="rounded-md" 
+                        className="rounded-md w-full" 
                         src="/images/jamie-conway.jpg"
                         width={320}
                         height={320}
-                        layout="responsive"
                         alt="Photo of Jamie Conway" 
                     />
                 </div>

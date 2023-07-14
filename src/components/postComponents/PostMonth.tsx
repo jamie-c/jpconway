@@ -3,7 +3,8 @@ import dayjs from "dayjs"
 const PostMonth = ({ posts }: { posts: []}) => {
 
     return (
-        {posts.map({})}
+        <div>Posts for the Month</div>
+        // {posts.map({})}
     )
 }
 

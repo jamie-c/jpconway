@@ -15,7 +15,6 @@ async function getData() {
 const Posts = async () => {
 
     const data = await getData()
-    console.log("🚀 ~ file: page.tsx:16 ~ Posts ~ data:", data)
 
     return (
         <div id="about" className="px-8 md:px-24 lg:px-48 max-w-7xl">

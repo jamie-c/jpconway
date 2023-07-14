@@ -3,7 +3,8 @@ import { getSortedPostsData } from "../../../lib/posts"
 import dayjs from 'dayjs'
 import PostDate from "@/components/postComponents/PostDate"
 import PostYear from "@/components/postComponents/PostYear"
-import StyledLink from "@/components/StyledLink"
+// import StyledLink from "@/components/StyledLink"
+import Link from "next/link"
 
 async function getData() {
     const allPostsData = getSortedPostsData()
@@ -67,7 +68,9 @@ const Posts = async () => {
                                     <span className="w-24">
                                         <PostDate date={date} />
                                     </span>
-                                    <StyledLink url={`/posts/${id}`} title={title} />
+                                    <Link 
+                                        className="text-[#3a86ff] hover:text-[#0767FF] border-b-2 border-[#3a86ff] hover:border-[#0767FF] font-medium text-xl" 
+                                        href={`/posts/${id}`}>{title}</Link>
                                 </div>
                             )
                         })}

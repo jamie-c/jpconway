@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html, 
+body, 
+#root {
+    --tricorn-black: #2F2F30;
+    --pure-white: #edece6;
+}
+
 .ham {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
@@ -36,4 +43,40 @@
   }
   .ham.active .bottom {
     stroke-dashoffset: -68px;
+  }
+
+/* POST STYLES */
+
+#post-content > #inner-html > h3 {
+  font-size: 1.17rem;
+  font-weight: 700;
+}
+
+/* STYLES FOR CODE BLOCKS */
+  #post-content > #inner-html > pre {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--tricorn-black);
+    padding: 2em;
+    border-radius: 6px;
+  }
+
+pre > code, kbd {
+    font-family: monospace;
+    color: var(--pure-white);
+    font-size: 0.8rem;
+  }
+
+  kbd {
+    background-color: var(--tricorn-black);
+    border-radius: 3px;
+    border: 1px solid rgb(180, 180, 180);
+    padding: 1px 6px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px;
+  }
+
+  pre > code {
+      display: block;
+      white-space: normal;
   }

@@ -16,8 +16,9 @@ For example, consider the triple "John is married to Jane". Here, "John" is the 
 Semantic queries are a way to query a triplestore using a language called SPARQL (SPARQL Protocol and RDF Query Language). SPARQL allows users to write queries that ask specific questions about the data stored in the triplestore. These queries can be simple, such as finding all triples that contain a specific value, or complex, such as finding all entities related to a given entity through a specific predicate.
 
 For example, a simple SPARQL query might look like this:
-<pre class="codeblock">
-<code class="code">
+
+<pre>
+<code>
 SELECT ?s ?p ?o <br />
 WHERE { ?s ?p ?o . <br />
 FILTER(?o = "Jane") }

@@ -7,8 +7,8 @@ Sometimes its useful, when editing a python script in vim, to quickly run the sc
 
 Here's the code to configure vim to run a python file that is in the current buffer with the press of the <kbd>F5</kbd> key.
 
-<pre class="codeblock">
-<code class="code">
+<pre>
+<code>
   &quot; Map the F5 key to run a Python script inside Vim.<br>
   &quot; We map F5 to a chain of commands here.<br>
   &quot; :w saves the file.<br>

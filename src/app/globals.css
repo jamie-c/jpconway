@@ -7,6 +7,8 @@ body,
 #root {
     --tricorn-black: #2F2F30;
     --pure-white: #edece6;
+    --primary-link: #3a86ff;
+    --primary-link-hover: #0767FF;
 }
 
 .ham {
@@ -47,9 +49,24 @@ body,
 
 /* POST STYLES */
 
+#post-content > #inner-html > h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 #post-content > #inner-html > h3 {
   font-size: 1.17rem;
   font-weight: 700;
+}
+
+#post-content > #inner-html a {
+  color: var(--primary-link);
+  border-bottom: 2px solid var(--primary-link);
+}
+
+#post-content > #inner-html  a:hover {
+  color: var(--primary-link-hover);
+  border-bottom: 2px solid var(--primary-link-hover);
 }
 
 /* STYLES FOR CODE BLOCKS */

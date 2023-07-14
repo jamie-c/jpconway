@@ -3,6 +3,14 @@ import path from 'path';
 import matter from 'gray-matter';
 import dayjs from 'dayjs';
 import { remark } from 'remark';
+import {unified} from 'unified'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import rehypeRaw from 'rehype-raw'
+import rehypeSanitize from 'rehype-sanitize'
+import rehypeStringify from 'rehype-stringify'
+
+
 import html from 'remark-html';
 
 
@@ -75,10 +83,17 @@ export async function getPostData(id) {
     const matterResult = matter(fileContents);
 
     // Use remark to convert markdown into HTML string
-    const processedContent = await remark()
-        .use(html)
+    const processedContent = await unified()
+        .use(remarkParse)
+        .use(remarkRehype, {allowDangerousHtml: true})
+        .use(rehypeRaw)
+        .use(rehypeSanitize)
+        .use(rehypeStringify)
         .process(matterResult.content);
-    const contentHtml = processedContent.toString();
+    
+    // const contentHtml = processedContent.toString();
+    const contentHtml = processedContent.value;
+    console.log("🚀 ~ file: posts.js:96 ~ getPostData ~ contentHtml:", contentHtml)
 
     // Combine the data with the id and contentHtml
     return {

@@ -65,12 +65,14 @@ const Posts = async () => {
                         {groupedPosts[year][month].map(({ id, date, title }) => {
                             return (
                                 <div className="flex flex-row gap-5 pb-2" id={month} key={id}>
-                                    <span className="w-24">
+                                    <span className="min-w-fit w-24">
                                         <PostDate date={date} />
                                     </span>
-                                    <Link 
-                                        className="text-[#3a86ff] hover:text-[#0767FF] border-b-2 border-[#3a86ff] hover:border-[#0767FF] font-medium text-xl" 
-                                        href={`/posts/${id}`}>{title}</Link>
+                                    <span className="w-full sm:w-fit">
+                                        <Link 
+                                            className="text-[#3a86ff] hover:text-[#0767FF] border-b-2 border-[#3a86ff] hover:border-[#0767FF] font-medium text-xl" 
+                                            href={`/posts/${id}`}>{title}</Link>
+                                    </span>
                                 </div>
                             )
                         })}

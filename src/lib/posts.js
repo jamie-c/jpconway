@@ -2,16 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import dayjs from 'dayjs';
-import { remark } from 'remark';
 import {unified} from 'unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 import rehypeRaw from 'rehype-raw'
 import rehypeSanitize from 'rehype-sanitize'
 import rehypeStringify from 'rehype-stringify'
-
-
-import html from 'remark-html';
 
 
 const postsDirectory = path.join(process.cwd(), 'src', 'data');

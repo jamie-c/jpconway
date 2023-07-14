@@ -4,7 +4,6 @@ import dayjs from 'dayjs'
 import PostDate from "@/components/postComponents/PostDate"
 import PostYear from "@/components/postComponents/PostYear"
 import StyledLink from "@/components/StyledLink"
-import { groupCollapsed } from "console"
 
 async function getData() {
     const allPostsData = getSortedPostsData()
@@ -61,7 +60,7 @@ const Posts = async () => {
                     <>
                     <PostYear id={year} key={year} date={year} />
                     {getMonths(year).map(month => (
-                        <div id={month} className="pb-4" key={year}>
+                        <div id={month} className="pb-4" key={month}>
                         {groupedPosts[year][month].map(({ id, date, title }) => {
                             return (
                                 <div className="flex flex-row gap-5 pb-2" id={month} key={id}>

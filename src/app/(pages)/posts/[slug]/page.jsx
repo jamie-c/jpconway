@@ -44,7 +44,8 @@ async function Page({ params }) {
                         rel="noopener noreferrer"
                         target="_blank">jamie_conway</a></div>
             </div>
-            <div 
+            <div
+                id="inner-html" 
                 className="text-lg flex flex-col gap-4"
                 dangerouslySetInnerHTML={{ __html: postContent }} 
             />

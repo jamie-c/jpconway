@@ -6,7 +6,7 @@ const PostDate = ({ date }: { date: string}) => {
     const dayNum = dayjs(date).format('DD')
 
     return (
-        <div className="text-lg font-light">
+        <div className="text-xl font-medium">
             {`${monthName} ${dayNum}`}
         </div>
     )

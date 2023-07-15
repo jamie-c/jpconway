@@ -9,26 +9,6 @@ body,
     --pure-white: #edece6;
     --primary-link: #3a86ff;
     --primary-link-hover: #0767FF;
-    background-color: #f7f7f7;
-    --shadow-color: 210deg 3% 53%;
-    --shadow-elevation-low:
-      0.7px 0.4px 1px hsl(var(--shadow-color) / 0.33),
-      1.3px 0.7px 1.8px -1px hsl(var(--shadow-color) / 0.38),
-      3.1px 1.7px 4.2px -2px hsl(var(--shadow-color) / 0.44);
-    --shadow-elevation-medium:
-      0.7px 0.4px 1px hsl(var(--shadow-color) / 0.35),
-      2.8px 1.5px 3.8px -0.7px hsl(var(--shadow-color) / 0.39),
-      6.6px 3.7px 9.1px -1.3px hsl(var(--shadow-color) / 0.43),
-      15.6px 8.7px 21.4px -2px hsl(var(--shadow-color) / 0.47);
-    --shadow-elevation-high:
-      0.7px 0.4px 1px hsl(var(--shadow-color) / 0.32),
-      5.6px 3.1px 7.7px -0.3px hsl(var(--shadow-color) / 0.34),
-      10.4px 5.8px 14.3px -0.6px hsl(var(--shadow-color) / 0.36),
-      16.6px 9.2px 22.8px -0.9px hsl(var(--shadow-color) / 0.38),
-      25.7px 14.3px 35.3px -1.1px hsl(var(--shadow-color) / 0.4),
-      39.1px 21.7px 53.7px -1.4px hsl(var(--shadow-color) / 0.42),
-      58.4px 32.4px 80.1px -1.7px hsl(var(--shadow-color) / 0.44),
-      84.9px 47.2px 116.6px -2px hsl(var(--shadow-color) / 0.46);
 }
 
 .ham {

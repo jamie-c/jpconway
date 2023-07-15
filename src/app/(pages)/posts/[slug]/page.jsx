@@ -28,7 +28,6 @@ async function Page({ params }) {
     const postContent = (await getHTML(params.slug)).contentHtml
     const postTitle = (await getHTML(params.slug)).title
     const { id, contentHtml, title, date } = (await getHTML(params.slug))
-    console.log("🚀 ~ file: page.jsx:29 ~ Page ~ { id, contentHtml, title, date }:", { id, contentHtml, title, date })
 
     const formattedDate = dayjs(date).format('MMM DD, YYYY')
 

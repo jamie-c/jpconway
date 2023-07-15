@@ -89,7 +89,6 @@ export async function getPostData(id) {
     
     // const contentHtml = processedContent.toString();
     const contentHtml = processedContent.value;
-    console.log("🚀 ~ file: posts.js:96 ~ getPostData ~ contentHtml:", contentHtml)
 
     // Combine the data with the id and contentHtml
     return {

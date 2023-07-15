@@ -6,3 +6,9 @@ export function getApiKey() {
 	
     return weatherApiKey;
 };
+
+export async function getForecast(url) {
+		const res = await fetch(url);
+		const { forecast } = await res.json();
+		return forecast.forecastday;
+	};

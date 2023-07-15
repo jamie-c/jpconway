@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import DayCard from './DayCard';
+import { getForecast } from '@/app/(pages)/weather/getWeatherForecast';
 
 const WeatherForecast = ({ api_key }) => {
 
@@ -9,19 +10,21 @@ const WeatherForecast = ({ api_key }) => {
 	const [forecastData, setForecastData] = useState([]);
 	const url = `https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${zipCode}&days=3&aqi=no&alerts=no`;
 
-	const getForecast = async () => {
-		const res = await fetch(url);
-		const { forecast } = await res.json();
-		setForecastData(forecast.forecastday);
-	};
+	const getResponse = () => {
+		getForecast(url)
+		.then((data) => { 
+			setForecastData(data)
+		})
+		.catch(e => 'there was an error getting the data')
+	}
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		getForecast();
+		getResponse();
 	}
 
 	useEffect(() => {
-		getForecast();
+		getResponse();
 	}, []);
 
 	return (

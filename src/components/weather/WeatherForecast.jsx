@@ -2,14 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import DayCard from './DayCard';
-require('dotenv').config()
 
-const WeatherForecast = () => {
+const WeatherForecast = ({ api_key }) => {
 
-	const weatherApiKey = process.env.WEATHER_API_KEY;
 	const [zipCode, setZipCode] = useState(73102);
 	const [forecastData, setForecastData] = useState([]);
-	const url = `https://api.weatherapi.com/v1/forecast.json?key=${weatherApiKey}&q=${zipCode}&days=3&aqi=no&alerts=no`;
+	const url = `https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${zipCode}&days=3&aqi=no&alerts=no`;
 
 	const getForecast = async () => {
 		const res = await fetch(url);

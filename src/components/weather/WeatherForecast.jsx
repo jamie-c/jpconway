@@ -6,16 +6,22 @@ import { getForecast } from '@/app/(pages)/weather/getWeatherForecast';
 
 const WeatherForecast = ({ api_key }) => {
 
-	const [zipCode, setZipCode] = useState(73000);
+	const [zipCode, setZipCode] = useState(null);
 	const [forecastData, setForecastData] = useState([]);
+	const [loading, setLoading] = useState('');
+	const [loadingMsg, setLoadingMsg] = useState('');
 	const url = `https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${zipCode}&days=3&aqi=no&alerts=no`;
 
 	const getResponse = () => {
-		getForecast(url)
-		.then((data) => { 
-			setForecastData(data)
-		})
-		.catch(e => 'there was an error getting the data')
+		setLoading('loading');
+		if (zipCode) {
+			getForecast(url)
+			.then((data) => { 
+				setForecastData(data)
+			})
+			.catch(e => 'there was an error getting the data')
+			.finally(setLoading('loaded'));
+		}
 	}
 
 	const handleSubmit = (event) => {
@@ -23,9 +29,20 @@ const WeatherForecast = ({ api_key }) => {
 		getResponse();
 	}
 
-	// useEffect(() => {
-	// 	getResponse();
-	// }, []);
+	useEffect(() => {
+		switch (loading) {
+			case 'loading':
+				setLoadingMsg((<div>Getting weather forecast for {zipCode}.</div>));
+				break;
+			case 'entering zip':
+				setLoadingMsg((<div>Please enter a zip code...</div>));
+				break;
+			case 'loaded':
+				setLoadingMsg((<div>Weather forecast for {zipCode}:</div>));
+				break;
+		}
+	}, [loading]);
+
 
 	return (
 		<div
@@ -45,7 +62,10 @@ const WeatherForecast = ({ api_key }) => {
 					type="number"
 					placeholder="Enter your Zip Code"
 					value={zipCode}
-					onChange={e => setZipCode(e.target.value)}
+					onChange={e => {
+						setLoading('entering zip');
+						setZipCode(e.target.value);
+					}}
 					style={{
 						width: '100%',
 						margin: '10px 0'
@@ -53,15 +73,7 @@ const WeatherForecast = ({ api_key }) => {
 				/>
 			</form>
 
-			{zipCode.length !== 5 ? (
-				<div>
-					Please enter a zip code...
-				</div>
-			) : (
-				<div>
-					Weather Forecast for {zipCode}:
-				</div>
-			)}
+			{loadingMsg}
 
 			{/* build the DayCard with the forecastData */}
 			{forecastData.map(({ date, day: { condition, maxtemp_f, mintemp_f }, hour }) => {

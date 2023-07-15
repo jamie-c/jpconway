@@ -6,7 +6,7 @@ import { getForecast } from '@/app/(pages)/weather/getWeatherForecast';
 
 const WeatherForecast = ({ api_key }) => {
 
-	const [zipCode, setZipCode] = useState(73102);
+	const [zipCode, setZipCode] = useState(73000);
 	const [forecastData, setForecastData] = useState([]);
 	const url = `https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${zipCode}&days=3&aqi=no&alerts=no`;
 
@@ -23,18 +23,13 @@ const WeatherForecast = ({ api_key }) => {
 		getResponse();
 	}
 
-	useEffect(() => {
-		getResponse();
-	}, []);
+	// useEffect(() => {
+	// 	getResponse();
+	// }, []);
 
 	return (
 		<div
-            style={{
-                width: '75%',
-                display: 'flex',
-                flexDirection: 'column',
-				margin: 'auto'
-            }}
+			className='flex flex-col m-auto'
         >
 			<form 
 				onSubmit={handleSubmit}

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const HourLine = ({ time, conditionImageUrl, condition, temp, highTemp, lowTemp }) => {
     
     let color = '';
@@ -19,23 +21,10 @@ const HourLine = ({ time, conditionImageUrl, condition, temp, highTemp, lowTemp 
     return (
     <>
         <span
-            style={{
-                color: '#4b595e',
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                gap: '10px'
-            }}
+            className="text-[#4b595e] flex flex-row items-center justify-between gap-10"
         >
             <span
-                style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    alignItems: 'center',
-                    justifyContent: 'flex-start',
-                    gap: '10px'
-                }}
+                className="flex flex-row items-center justify-start gap-10"
             >
     	    <div
                 style={{
@@ -47,30 +36,22 @@ const HourLine = ({ time, conditionImageUrl, condition, temp, highTemp, lowTemp 
             >
                 {time}
             </div>
-    	    <img 
-                alt="the hourly condition"
-                src={conditionImageUrl}
-                height='30px'
+            <Image
+                className="rounded-md w-auto h-6 sm:h-auto" 
+                src={`https:${conditionImageUrl}`}
+                width={320}
+                height={320}
+                alt="the daily condition" 
             />
         <span
-            style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center'
-            }}
+            className="flex flex-row items-center"
         >
     	    <div>{condition}</div>
         </span>
         </span>
         <span
-            style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'flex-end',
-                position: 'relative',
-                right: 0
-            }}>
+            className="flex flex-row items-center justify-end relative right-0 text-sm"
+        >
     	    <div
                 style={{
                     color:`${color}`

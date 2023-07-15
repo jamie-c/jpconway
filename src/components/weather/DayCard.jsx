@@ -1,5 +1,6 @@
 import HourCard from "./HourCard";
 import autoAnimate from '@formkit/auto-animate'
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const DayCard = ({ date, conditionImageUrl, condition, highTemp, lowTemp, hour }) => {
@@ -29,67 +30,39 @@ const DayCard = ({ date, conditionImageUrl, condition, highTemp, lowTemp, hour }
     >
 
 	<div
-        style={{
-            backgroundColor: '#FCFCFC',
-            color: '#4b595e',
-            display: 'flex',
-            flexDirection: 'row',
-            justifyContent: 'space-between',
-            padding: '20px',
-            borderRadius: '6px',
-            position: 'sticky',
-            top: 0,
-            zIndex: 10,
-        }}
-        className="translucent"
+        className="bg-white backdrop-filter drop-shadow-xl backdrop-blur-lg text-[#4b595e] flex flex-row justify-between items-center p-4 sticky top-16 z-10 bg-opacity-60 rounded-md"
     >
+        {/* <span
+            className="flex flex-row items-center justify-start gap-4"
+        > */}
+		    <div
+                className="w-8 font-lg flex-1"
+            >
+                {date}
+            </div>
+            <Image 
+                className="rounded-md w-auto h-6 sm:h-auto pr-3" 
+                src={`https:${conditionImageUrl}`}
+                width={320}
+                height={320}
+                alt="the daily condition" 
+            />
+            <div
+                className="text-[#8ad0ce] text-2xl sm:text-4xl flex-1"
+            >
+                {Math.trunc(lowTemp)}&#8457;
+            </div>
+        {/* </span> */}
         <span
-            style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'flex-start',
-                gap: '10px'
-            }}
-        >
-		<div
-            style={{
-                width: '7rem',
-                textAlign: 'left',
-                fontSize: '2rem'
-            }}
-        >{date}</div>
-		<img alt="the daily condition" src={conditionImageUrl} />
-        <div
-            style={{
-                color: '#8ad0ce',
-                fontSize: '2rem'
-            }}
-        >{Math.trunc(lowTemp)}&#8457;</div>
-        </span>
-        <span
-            style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center'
-            }}
+            className="flex flex-row items-center text-sm flex-1"
         >
 		<div>{condition}</div>
         </span>
         <span
-            style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'flex-end',
-                position: 'relative',
-                right: 0
-            }}>
+            className="flex flex-row items-center justify-end relative right-0 flex-1"
+        >
 		<div
-            style={{
-                color: '#ff6d6d',
-                fontSize: '2rem'
-            }}
+            className="text-[#ff6d6d] text-2xl sm:text-4xl"
         >{Math.trunc(highTemp)}&#8457;</div>
         </span>
 	</div>

@@ -5,15 +5,7 @@ const HourCard = ({hour, dayOfWeek, highTemp, lowTemp}) => {
 
     return (
         <div
-            style={{
-                backgroundColor: '#FCFCFC',
-                color: '#4b595e',  
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'flex-start',
-                padding: '20px',
-                borderRadius: '6px'
-            }}
+            className='bg-[#FCFCFC] text-[#4b595e] flex flex-col justify-start p-4 rounded-md mb-4'
         > Hourly Forcast for {dayOfWeek}
             {hour.map(({ time, condition, temp_f }) => {
                 const timeSlice = time.slice(-5);

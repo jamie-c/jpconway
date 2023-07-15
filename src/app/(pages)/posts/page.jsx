@@ -70,7 +70,7 @@ const Posts = async () => {
                                     </span>
                                     <span className="w-full sm:w-fit">
                                         <Link 
-                                            className="text-[#3a86ff] hover:text-[#0767FF] border-b-2 border-[#3a86ff] hover:border-[#0767FF] font-medium text-xl" 
+                                            className="text-brightBlue-500 hover:text-darkBlue-600 border-b-2 border-brightBlue-500 hover:border-darkBlue-600 font-medium text-xl" 
                                             href={`/posts/${id}`}>{title}</Link>
                                     </span>
                                 </div>

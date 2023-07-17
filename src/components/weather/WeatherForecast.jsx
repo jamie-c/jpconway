@@ -56,7 +56,7 @@ const WeatherForecast = ({ api_key }) => {
             	    htmlFor="zipCode"
             	>Zip Code</label>
 				<input
-					className="py-2 text-tricornBlack-500"
+					className="p-2 rounded-md text-tricornBlack-500"
 					name="zipCode"
 					type="number"
 					placeholder="Enter your Zip Code"

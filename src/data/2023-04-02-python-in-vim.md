@@ -8,14 +8,13 @@ Sometimes its useful, when editing a python script in vim, to quickly run the sc
 Here's the code to configure vim to run a python file that is in the current buffer with the press of the <kbd>F5</kbd> key.
 
 <pre>
-<code>
-  &quot; Map the F5 key to run a Python script inside Vim.<br>
-  &quot; We map F5 to a chain of commands here.<br>
-  &quot; :w saves the file.<br>
-  &quot; &lt;CR&gt; (carriage return) is like pressing the enter key.<br>
-  &quot; !clear runs the external clear screen command.<br>
-  &quot; !python3 % executes the current file with Python.<br>
-  nnoremap &lt;f5&gt; :w &lt;CR&gt;:!clear &lt;CR&gt;:!python3 % &lt;CR&gt;<br>
+<code>&quot; Map the F5 key to run a Python script inside Vim.
+  &quot; We map F5 to a chain of commands here.
+  &quot; :w saves the file.
+  &quot; &lt;CR&gt; (carriage return) is like pressing the enter key.
+  &quot; !clear runs the external clear screen command.
+  &quot; !python3 % executes the current file with Python.
+  nnoremap &lt;f5&gt; :w &lt;CR&gt;:!clear &lt;CR&gt;:!python3 % &lt;CR&gt;
 </code> 
 </pre>
 

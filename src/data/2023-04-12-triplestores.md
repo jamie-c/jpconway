@@ -18,17 +18,21 @@ Semantic queries are a way to query a triplestore using a language called SPARQL
 For example, a simple SPARQL query might look like this:
 
 <pre>
-<code>
-SELECT ?s ?p ?o <br />
-WHERE { ?s ?p ?o . <br />
+<code>SELECT ?s ?p ?o
+WHERE { ?s ?p ?o .
 FILTER(?o = "Jane") }
 </code>
 </pre>
-<p>This query will find all triples in the triplestore where the object is "Jane". The resulting output will be a table with three columns: the subject, predicate, and object of each triple that matches the query.</p>
-<h3>The Power of Triplestores and Semantic Queries for Data Science</h3>
-<p>Triplestores and semantic queries are powerful tools for data scientists because they allow for complex data analysis and integration of data from multiple sources. By representing data as RDF triples, triplestores can easily combine data from different sources, even if they use different data models or formats. This can be especially useful in situations where data needs to be integrated from multiple systems, such as in healthcare or finance.</p>
-<p>Semantic queries also allow for powerful analysis of data, such as finding relationships between entities, clustering entities based on shared properties, and identifying patterns in the data. These queries can be used to build machine learning models, create visualizations, and make predictions based on the data.</p>
-<p>In addition, triplestores and semantic queries can be used to create knowledge graphs, which are visual representations of the relationships between entities in the data. Knowledge graphs can be used to gain insights into complex systems, such as social networks or financial markets, and can help identify new opportunities or areas for improvement.</p>
+
+This query will find all triples in the triplestore where the object is "Jane". The resulting output will be a table with three columns: the subject, predicate, and object of each triple that matches the query.
+
+### The Power of Triplestores and Semantic Queries for Data Science
+
+Triplestores and semantic queries are powerful tools for data scientists because they allow for complex data analysis and integration of data from multiple sources. By representing data as RDF triples, triplestores can easily combine data from different sources, even if they use different data models or formats. This can be especially useful in situations where data needs to be integrated from multiple systems, such as in healthcare or finance.
+
+Semantic queries also allow for powerful analysis of data, such as finding relationships between entities, clustering entities based on shared properties, and identifying patterns in the data. These queries can be used to build machine learning models, create visualizations, and make predictions based on the data.
+
+In addition, triplestores and semantic queries can be used to create knowledge graphs, which are visual representations of the relationships between entities in the data. Knowledge graphs can be used to gain insights into complex systems, such as social networks or financial markets, and can help identify new opportunities or areas for improvement.
 
 ### Conclusion
 

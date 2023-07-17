@@ -95,5 +95,5 @@ pre > code, kbd {
 
   pre > code {
       display: block;
-      white-space: normal;
+      white-space: pre-line;
   }

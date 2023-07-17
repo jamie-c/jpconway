@@ -84,7 +84,8 @@ Then there is the x-factor found in flavor. The factor or factors that greatly a
 To sum:
 We can categorize whole food ingredients using properties such as:
 
-<pre><code>taste                   = ['sweetness', 'saltiness', 'sourness', 'bitterness', 'umami']
+<pre><code>
+taste                   = ['sweetness', 'saltiness', 'sourness', 'bitterness', 'umami']
 mouthfeel               = ['temperature', 'texture', 'piquancy', 'astringency']
 aroma                   = ['sweet', 'savory', 'pungency', 'chemesthesis']
 primaryFlavorNotes      = ""
@@ -92,14 +93,15 @@ briefTextureDescription = ""
 volume                  = ['quiet', 'mild', 'medium', 'loud']
 seasonalPeak            = ['winter', 'spring', 'summer', 'autumn']
 </code></pre>
-<p>Additional information that would be helpful to link would be:</p>
-<pre><code>nutritionalInfo      -&gt; full nutrition facts
+<p>Additional properties that would be helpful to capture would be:</p>
+<pre><code>
+nutritionalInfo      -&gt; full nutrition facts
 containsGluten       -&gt; will it work in a gluten free meal?
 macroNutrients       -&gt; (i.e. Calories or protein)
 commonTechnique      -&gt; (what are the most common ways of preparing the ingredient)
 tips                 -&gt; anything important or relevant not covered in the other topics
 botanicalRelatives   -&gt; sometimes serves as inspiration for dishes or food pairings
-culinarySubstitues   -&gt; what foods would substitute well for a given ingredient in a dish?
+culinarySubstitutes  -&gt; what foods would substitute well for a given ingredient in a dish?
 strongFlavorPairings -&gt; what foods/flavors pair very well, or classically with a given item?
 weakFlavorPairings   -&gt; what foods/flavors pair somewhat well?
 </code></pre>

@@ -48,16 +48,15 @@ const WeatherForecast = ({ api_key }) => {
 		<div
 			className='flex flex-col m-auto'
         >
-			<form 
+			<form
+				className='my-5'
 				onSubmit={handleSubmit}
-				style={{
-					margin: '10px 0'
-				}}
 			>
 				<label 
             	    htmlFor="zipCode"
             	>Zip Code</label>
 				<input
+					className="py-2 text-tricornBlack-500"
 					name="zipCode"
 					type="number"
 					placeholder="Enter your Zip Code"

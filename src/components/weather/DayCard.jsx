@@ -22,7 +22,7 @@ const DayCard = ({ date, conditionImageUrl, condition, highTemp, lowTemp, hour }
     return (
     <div 
         onClick={toggleHourCardVisibility}
-        className="low-box-shadow medium-box-shadow"
+        className="low-box-shadow medium-box-shadow bg-pureWhite-600"
         ref={parentRef}
         style={{
             cursor: 'pointer'

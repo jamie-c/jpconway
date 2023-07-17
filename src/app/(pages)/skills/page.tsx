@@ -53,8 +53,15 @@ const Skills = () => {
     return (
         <div id="skills-page" className="px-8 md:px-24 lg:px-48 max-w-7xl w-full flex flex-col items-start">
             <HeadingOne title="Skills" />
-            {skillImages.map(({ title, linkTo, fileName, profileTitle, profileUrl }: 
-                {title: string, linkTo: string, fileName: string, profileTitle: string, profileUrl: string }) => {
+            {skillImages.map((skillImage: {
+                title: string;
+                linkTo: string;
+                fileName: string;
+                profileTitle: string;
+                profileUrl: string;
+  }             | undefined, index: number) => {
+                if (skillImage) {
+                    const { title, linkTo, fileName, profileTitle, profileUrl } = skillImage;
                     return (
                 <div
                     key={fileName}
@@ -79,7 +86,7 @@ const Skills = () => {
                         title={profileTitle}
                     />
                 </div>
-)})}
+)}})}
         </div>
     )
 }

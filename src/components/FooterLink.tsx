@@ -11,7 +11,7 @@ const FooterLink: NextPage<Props> = ({ title, url }) => {
     if (url.startsWith('http://') || url.startsWith('https://')) {  // if external url add rel and target to rest
         return (
             <p className="mt-6">Find me on <a 
-                    className="text-pure-white border-b-2 border-b-pure-white hover:border-b-0" 
+                    className="text-pureWhite-200 border-b-2 border-b-pureWhite-200 hover:border-b-0" 
                     href={url}
                     rel='noopener noreferrer'
                     target="_blank"
@@ -24,7 +24,7 @@ const FooterLink: NextPage<Props> = ({ title, url }) => {
     } else {
         return (
             <p className="mt-6">Find me on <Link 
-                    className="text-pure-white border-b-2 border-b-pure-white hover:border-b-0" 
+                    className="text-pureWhite-200 border-b-2 border-b-pureWhite-200 hover:border-b-0" 
                     href={url}
                 > 
                         {title}

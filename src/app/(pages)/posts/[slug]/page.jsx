@@ -34,7 +34,7 @@ async function Page({ params }) {
     return (
         <div id="post-content" className="px-8 md:px-24 lg:px-48 max-w-7xl w-full flex flex-col items-start">
             <em><HeadingOne title={postTitle} /></em>
-            <div id="post-metadata" className="flex flex-row items-center justify-start text-sm font-light mb-8 divide-x-2 divide-[#2F2F30]" >
+            <div id="post-metadata" className="flex flex-row items-center justify-start text-sm font-light mb-8 divide-x-2 divide-tricornBlack-500 dark:divide-pureWhite-200" >
                 <div className="text-[#8a51ae] pr-6">{formattedDate}</div>
                 <div className="pl-6">
                     <a 

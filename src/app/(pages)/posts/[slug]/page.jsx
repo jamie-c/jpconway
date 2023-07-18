@@ -1,7 +1,7 @@
 import HeadingOne from "@/components/HeadingOne"
-import StyledLink from "@/components/StyledLink"
 import { getAllPostIds, getPostData } from "@/lib/posts"
 import dayjs from "dayjs"
+import Link from "next/link"
 
 
 // use generateStaticParams to generate all url slugs at build to be statically served
@@ -9,6 +9,7 @@ export async function generateStaticParams() {
     // get all post ids, which will serve as the url slug, i.e. /posts/slug
     const posts = getAllPostIds()
 
+    // map the ids to the url slugs
     return posts.map((post) => {
         return ({
             slug: post.params.id,
@@ -19,21 +20,32 @@ export async function generateStaticParams() {
 // define the page content for each post
 async function Page({ params }) {
 
-    // Need to read contents of the .md file from the server
+    // Read contents of the .md file from the server
     async function getHTML(id) {
         const postData = await getPostData(id)
         return postData  // return html content as string
     }
 
-    const postContent = (await getHTML(params.slug)).contentHtml
-    const postTitle = (await getHTML(params.slug)).title
-    const { id, contentHtml, title, date } = (await getHTML(params.slug))
+    const postContent = (await getHTML(params.slug)).contentHtml  // get the html content
+    const postTitle = (await getHTML(params.slug)).title  // get the title
+    const { id, contentHtml, title, date } = (await getHTML(params.slug))  // get all meta data
 
-    const formattedDate = dayjs(date).format('MMM DD, YYYY')
+    const formattedDate = dayjs(date).format('MMM DD, YYYY')  // format the date for display on the page
 
     return (
         <div id="post-content" className="px-8 md:px-24 lg:px-48 max-w-7xl w-full flex flex-col items-start">
+            {/* element containing a back arrow and link back to the previous page */}
+            <div id="back-link">
+                <Link href="/posts" className="flex flex-row items-center justify-start mt-4">
+                    <svg className="w-6 h-6 mr-1" viewBox="0 0 24 24" fill="none" stroke="#3a86ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                    <span className="text-brightBlue-500 hover:text-darkBlue-600">Posts</span>
+                </Link>
+            </div>
+            {/* element containing the title in a heading */}
             <em><HeadingOne title={postTitle} /></em>
+            {/* element containing the post content starting with formattedDate, vertical line, link to author */}
             <div id="post-metadata" className="flex flex-row items-center justify-start text-sm font-light mb-8 divide-x-2 divide-tricornBlack-500 dark:divide-pureWhite-200" >
                 <div className="text-[#8a51ae] pr-6">{formattedDate}</div>
                 <div className="pl-6">
@@ -43,6 +55,7 @@ async function Page({ params }) {
                         rel="noopener noreferrer"
                         target="_blank">jamie_conway</a></div>
             </div>
+            {/* finally, element containing the post content */}
             <div
                 id="inner-html" 
                 className="text-lg flex flex-col gap-4"

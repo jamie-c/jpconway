@@ -10,7 +10,7 @@ import rehypeSanitize from 'rehype-sanitize'
 import rehypeStringify from 'rehype-stringify'
 
 
-const postsDirectory = path.join(process.cwd(), 'src', 'data');
+const postsDirectory = path.join(process.cwd(), 'src', '_posts');
 
 export function getSortedPostsData() {
   // Get file names under /posts

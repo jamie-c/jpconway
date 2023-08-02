@@ -15,7 +15,7 @@ The third version went to react, which I did not fully build out, because I deci
 
 So what you are reading now is the fourth implementation of jpconway.com. I switched the hosting from github pages to vercel to experiment with server and client code.
 
-For the blog posts, I also drastically change how that is implemented. All posts are now a folder of markdown files. I wrote a javaScript module to parse the folder, getting the filenames and content, and generate the html for each post. The info is also used to build the '/posts' page and all routes at build time. The benefit of Next.js building static pages from the content is that the site actually works without javascript enabled on the client as everything is rendered during build, compared to the first javascript version, which would show no content on the '/posts' page without javascript enabled on the client.
+For the blog posts, I also drastically changed how that is implemented. All posts are now a folder of markdown files. I wrote a javaScript module to parse the folder, getting the filenames and content, and generate the html for each post. The info is also used to build the '/posts' page and all routes at build time. The benefit of Next.js building static pages from the content is that the site actually works without javascript enabled on the client as everything is rendered during build, compared to the first javascript version, which would show no content on the '/posts' page without javascript enabled on the client.
 
 Here's a summary of the key stages in the evolution of jpconway.com:
 
@@ -29,7 +29,7 @@ Here's a summary of the key stages in the evolution of jpconway.com:
 
 -   Transitioned from separate HTML files to a single JavaScript file containing an array of objects with blog post information.
 -   Utilized vanilla JavaScript to dynamically display blog post content on the posts page.
--   Likely continued to use GitHub Pages for hosting.
+-   Continued to use GitHub Pages for hosting.
 
 ## Third version (React):
 

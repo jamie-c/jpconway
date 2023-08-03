@@ -1,7 +1,7 @@
-import Footer from '../components/Footer'
-import Header from '../components/Header'
-import './globals.css'
+import { Analytics } from '@vercel/analytics/react'
 import { Inter } from 'next/font/google'
+import Footer from '../components/Footer'
+import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,6 +20,7 @@ export default function RootLayout({
             <body className={`${inter.className} bg-pureWhite-100 text-tricornBlack-500 dark:bg-tricornBlack-700 dark:text-pureWhite-200`}>
                 {children}
                 <Footer />
+                <Analytics />
             </body>
         </html>
     )

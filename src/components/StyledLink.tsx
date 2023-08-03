@@ -15,7 +15,7 @@ const StyledLink: NextPage<Props> = ({ url, title }) => {
                 className={linkStyle}
                 href={url}
                 rel="noopener noreferrer"
-                target="blank"
+                target="_blank"
             >
                 {title}
             </a>

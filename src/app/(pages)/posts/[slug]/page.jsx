@@ -36,11 +36,11 @@ async function Page({ params }) {
         <div id="post-content" className="px-8 md:px-24 lg:px-48 max-w-7xl w-full flex flex-col items-start">
             {/* element containing a back arrow and link back to the previous page */}
             <div id="back-link">
-                <Link href="/posts" className="flex flex-row items-center justify-start mt-4">
-                    <svg className="w-6 h-6 mr-1" viewBox="0 0 24 24" fill="none" stroke="#3a86ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <Link href="/posts" className="group flex flex-row items-center justify-start mt-4">
+                    <svg className="w-6 h-6 mr-1 group-hover:stroke-darkBlue-600" viewBox="0 0 24 24" fill="none" stroke="#3a86ff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M15 18l-6-6 6-6" />
                     </svg>
-                    <span className="text-brightBlue-500 hover:text-darkBlue-600">Posts</span>
+                    <span className="text-brightBlue-500 group-hover:text-darkBlue-600">Posts</span>
                 </Link>
             </div>
             {/* element containing the title in a heading */}

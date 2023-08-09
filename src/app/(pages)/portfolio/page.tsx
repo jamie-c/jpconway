@@ -19,7 +19,7 @@ const portfolio = [
     },
     {
         title: 'Nourished Co',
-        linkTo: 'https://nourishedfood.co',
+        linkTo: '/portfolio/nourishedco',
         fileName: 'NourishedCo-Home.jpg',
         category: 'Websites'
     }

@@ -7,6 +7,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "cdn.weatherapi.com",
       },
+      {
+        protocol: "https",
+        hostname: "user-images.githubusercontent.com",
+      },
     ],
   },
 }

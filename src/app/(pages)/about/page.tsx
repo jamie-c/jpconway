@@ -25,7 +25,7 @@ const About = () => {
                     <p>In addition to my technical skills, I am a collaborative team player who thrives in a fast-paced, dynamic environment. I am a clear communicator who can articulate complex technical and scientific concepts to both technical and non-technical stakeholders. My ability to bridge the gap between technology and science makes me an asset to any team.</p>
                     <p>I am excited about the opportunity to bring my skills and experience to your organization as a full stack developer. Please don&apos;t hesitate to reach out if you have any questions or if you would like to discuss potential job opportunities. Thank you for your time and consideration, and I look forward to hearing from you soon!</p>
                     <p>I have work experience building websites using many different tech stacks including wordpress (LAMP), django, flask, react, node...</p>
-                    <p id="backend">Backend experience includes: neo4j, cypher, mongoDB, mongoose.</p>
+                    <p id="backend">Backend experience includes: neo4j, cypher, mongoDB, mongoose, and Next.js server components and API routes.</p>
                     <p>I&apos;m obsessed with learning new languages, and building projects to be fun and appealing to use!</p>
                     <p id="for-hire">I am  open for  work - feel free to contact me at any time. Contact me for work via email at forhire@jpconway.com.</p>
                 </div>

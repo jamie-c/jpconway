@@ -15,7 +15,7 @@ async function getData() {
 }
 
 async function getAllPostData() {
-    const allPostsData = await fetch('http://localhost:3000/api/posts')
+    const allPostsData = await fetch('/api/posts')
     const data = await allPostsData.json()
     return data
 }

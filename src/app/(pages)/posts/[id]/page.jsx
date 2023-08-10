@@ -4,15 +4,15 @@ import dayjs from "dayjs"
 import Link from "next/link"
 
 
-// use generateStaticParams to generate all url slugs at build to be statically served
+// use generateStaticParams to generate all url ids at build to be statically served
 export async function generateStaticParams() {
-    // get all post ids, which will serve as the url slug, i.e. /posts/slug
+    // get all post ids, which will serve as the url id, i.e. /posts/id
     const posts = getAllPostIds()
 
-    // map the ids to the url slugs
+    // map the ids to the url ids
     return posts.map((post) => {
         return ({
-            slug: post.params.id,
+            id: post.params.id,
         })
     })
 }
@@ -26,9 +26,9 @@ async function Page({ params }) {
         return postData  // return html content as string
     }
 
-    const postContent = (await getHTML(params.slug)).contentHtml  // get the html content
-    const postTitle = (await getHTML(params.slug)).title  // get the title
-    const { id, contentHtml, title, date } = (await getHTML(params.slug))  // get all meta data
+    const postContent = (await getHTML(params.id)).contentHtml  // get the html content
+    const postTitle = (await getHTML(params.id)).title  // get the title
+    const { id, contentHtml, title, date } = (await getHTML(params.id))  // get all meta data
 
     const formattedDate = dayjs(date).format('MMM DD, YYYY')  // format the date for display on the page
 

@@ -1,9 +1,9 @@
 import HeadingOne from "@/components/HeadingOne"
-import { getSortedPostsData } from "../../../lib/posts"
-import dayjs from 'dayjs'
 import PostDate from "@/components/postComponents/PostDate"
 import PostYear from "@/components/postComponents/PostYear"
-// import StyledLink from "@/components/StyledLink"
+import SearchBar from "@/components/search-bar/SearchBar"
+import { getSortedPostsData } from "@/lib/posts"
+import dayjs from 'dayjs'
 import Link from "next/link"
 
 async function getData() {
@@ -14,9 +14,16 @@ async function getData() {
     return allPostsData
 }
 
+async function getAllPostData() {
+    const allPostsData = await fetch('http://localhost:3000/api/posts')
+    const data = await allPostsData.json()
+    return data
+}
+
 
 const Posts = async () => {
-
+    
+    const allPostsData = await getAllPostData()
     const data = await getData()
     const mappedData = data.map(({ id, title, date }) => {
         const year = dayjs(date).year()
@@ -56,7 +63,8 @@ const Posts = async () => {
     return (
         <div id="posts" className="px-8 md:px-24 lg:px-48 max-w-7xl w-full flex flex-col items-start">
             <HeadingOne title="Posts" />
-            <section id="posts">
+            <SearchBar searchContent={allPostsData} />
+            <section id="posts" className="mt-10">
                 {years.map(year => (
                     <>
                     <PostYear id={year} key={year} date={year} />

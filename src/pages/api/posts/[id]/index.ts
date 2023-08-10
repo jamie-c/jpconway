@@ -1,6 +1,6 @@
 import { getPostData } from '@/lib/posts'
 
-export default async function handler(req: Request, res: Response) {
+export default async function handler(req, res) {
     
     const { id } = req.query
 

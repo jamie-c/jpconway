@@ -52,12 +52,13 @@ export default function SearchBar({ searchContent }: { searchContent: [] }) {
                 {searchResults.map((post: any) => {
                     return (
                         <div key={post.id}
-                            className="text-left leading-10 w-full"
+                            className="text-left leading-10 w-full 
+                            overflow-hidden break-words"
                         >
                             <Link 
                                 className={
-                                "block uppercase h-8 text-left leading-8"
-                                + " tracking-wide transition-colors duration-500"
+                                "block uppercase h-8 text-left leading-8 "
+                                + "tracking-wide transition-colors duration-500"
                                 + " indent-2 pl-6 "
                                 + backgroundColors
                                 }

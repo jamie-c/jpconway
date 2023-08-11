@@ -14,16 +14,16 @@ async function getData() {
     return allPostsData
 }
 
-async function getAllPostData() {
-    const allPostsData = await fetch('/api/posts')
-    const data = await allPostsData.json()
-    return data
-}
+// async function getAllPostData() {
+//     const allPostsData = await fetch('/api/posts', {next: {revalidate: 60}})
+//     const data = await allPostsData.json()
+//     return data
+// }
 
 
 const Posts = async () => {
     
-    const allPostsData = await getAllPostData()
+    // const allPostsData = await getAllPostData()
     const data = await getData()
     const mappedData = data.map(({ id, title, date }) => {
         const year = dayjs(date).year()
@@ -63,7 +63,7 @@ const Posts = async () => {
     return (
         <div id="posts" className="px-8 md:px-24 lg:px-48 max-w-7xl w-full flex flex-col items-start">
             <HeadingOne title="Posts" />
-            <SearchBar searchContent={allPostsData} />
+            <SearchBar searchContent={data} />
             <section id="posts" className="mt-10">
                 {years.map(year => (
                     <>

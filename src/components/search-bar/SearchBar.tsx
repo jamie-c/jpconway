@@ -15,7 +15,7 @@ export default function SearchBar({ searchContent }: { searchContent: [] }) {
 
     useEffect(() => {
         const results = searchContent.filter((post: any) => {
-            return post.contentHtml.toLowerCase().includes(searchTerm.toLowerCase()) || post.title.toLowerCase().includes(searchTerm.toLowerCase())
+            return  post.title.toLowerCase().includes(searchTerm.toLowerCase())
         })
         setSearchResults(results)
     }, [searchTerm])

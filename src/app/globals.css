@@ -93,6 +93,6 @@ pre > code, kbd {
   }
 
   pre > code {
-      display: block;
-      white-space: pre-line;
+      white-space: break-spaces;
+      word-break: break-all;
   }

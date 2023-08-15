@@ -6,12 +6,6 @@ import Link from "next/link"
 
 const portfolio = [
     {
-        title: 'Weather App',
-        linkTo: '/weather',
-        fileName: 'weather-app.jpg',
-        category: 'OKCoders'
-    },
-    {
         title: 'Ten Key Trips',
         linkTo: 'https://tenkeytrips.com',
         fileName: 'TenKeyTrips-Home.jpg',
@@ -22,7 +16,13 @@ const portfolio = [
         linkTo: '/portfolio/nourishedco',
         fileName: 'NourishedCo-Home.jpg',
         category: 'Websites'
-    }
+    },
+    {
+        title: 'Weather App',
+        linkTo: '/weather',
+        fileName: 'weather-app.jpg',
+        category: 'OKCoders'
+    },
 ]
 
 const Portfolio = () => {

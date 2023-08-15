@@ -7,8 +7,7 @@ const About = () => {
             <HeadingOne title='About Jamie'/>
             <section id="jamie">
 	            <div
-                    className="w-full sm:w-80 md:w-80 rotate-0 sm:rotate-2 relative float-none sm:float-right mb-8 sm:ml-11"
-                >
+                    className="w-full sm:w-80 md:w-80 rotate-0 sm:rotate-2 relative float-none sm:float-right mb-8 sm:ml-11">
                     <Image
                         className="rounded-md w-full" 
                         src="/images/jamie-conway.jpg"
@@ -17,17 +16,12 @@ const About = () => {
                         alt="Photo of Jamie Conway" 
                     />
                 </div>
-                <div className="text-justify text-lg">
-	                <p>Hello and welcome! My name is Jamie Conway and I am a full stack developer with a diverse background in entrepreneurship, food science, and  biomedical science. I have 5 years of experience in the field of software development, and owned and operated a small restaurant in the heart of downtown Oklahoma City for 7.5 years. I am one of the founders of <a href="https://www.nourishedfood.co" target="_blank">Nourished Co</a>.</p>
-                    <p id="okcoders">This site is a work-in-progress using what I&apos;ve learned in the <a href="https://www.okcoders.com/" target="_blank">OKCoders</a> bootcamp.</p>
-                    <p>As a full stack developer, I have a deep understanding of both front-end and back-end development, and I am comfortable working with a variety of programming languages and frameworks. I am committed to creating intuitive, user-friendly interfaces that provide an outstanding user experience, as well as robust and reliable back-end systems that can handle heavy traffic and large amounts of data.</p>
-                    <p id="background">My background in biomedical science has provided me with a unique perspective and a deep understanding of complex scientific concepts. I am able to leverage my expertise to create software solutions that meet the needs of scientists, researchers, and healthcare professionals. I am passionate about using technology to improve healthcare outcomes and to drive innovation in the industry.</p>
-                    <p>In addition to my technical skills, I am a collaborative team player who thrives in a fast-paced, dynamic environment. I am a clear communicator who can articulate complex technical and scientific concepts to both technical and non-technical stakeholders. My ability to bridge the gap between technology and science makes me an asset to any team.</p>
-                    <p>I am excited about the opportunity to bring my skills and experience to your organization as a full stack developer. Please don&apos;t hesitate to reach out if you have any questions or if you would like to discuss potential job opportunities. Thank you for your time and consideration, and I look forward to hearing from you soon!</p>
-                    <p>I have work experience building websites using many different tech stacks including wordpress (LAMP), django, flask, react, node...</p>
-                    <p id="backend">Backend experience includes: neo4j, cypher, mongoDB, mongoose, and Next.js server components and API routes.</p>
-                    <p>I&apos;m obsessed with learning new languages, and building projects to be fun and appealing to use!</p>
-                    <p id="for-hire">I am  open for  work - feel free to contact me at any time. Contact me for work via email at forhire@jpconway.com.</p>
+                <div className="text-justify text-lg space-y-4">
+                    <p>Hello and welcome! My name is Jamie Conway and I am a full stack developer. I am transitioning my career from the culinary world, where I was a chef and successful restaurant owner, to the tech industry. I'm almost done with OKCoders and am excited to enter the tech industry.</p>
+                    <p>I owned and operated Nourished Food Bar in the heart of downtown Oklahoma City for 8 years. While the workload of running a restaurant does not generally allow any free time or down time, I was able to create and maintain our restaurant's website during that time, and also learn to code in Python. One of the biggest aspects of successfully running a restaurant is managing and knowing the cost of goods. Managing how much money is in inventory, or in wasted product, determining what the cost of each menu item, and the actual profits are some of the important tasks necessary to successfully manage any restaurant. Of course, spreadsheets were made for these sorts of tasks, but there was something magical about managing these business tasks by writing Pythonic code! I've since learned JavaScript, and am in the process of learning TypeScript as well. </p>
+                    <p>While my background as a chef and entrepreneur may not immediately showcase my capacity, I have been diligently working to build a robust portfolio that highlights my coding projects and accomplishments during the boot camp. One aspect that my previous career has truly enriched is my ability to lead and manage teams effectively, bringing valuable interpersonal skills to any tech role.</p>
+                    <p>My primary strengths are in Python and JavaScript, particularly with Node.js, React.js, and Next.js. I have also been delving into TypeScript to broaden my skill set further. While my expertise lies in these areas, I have built a solid foundation in computer science principles, which enables me to quickly adapt to new languages and frameworks. I am eager to delve into Rust as my next learning endeavor.</p>
+                    <p>I am confident that my strong work ethic, adaptability, and passion for continuous learning make me a valuable addition to any tech team. </p>
                 </div>
         </section>
         </div>

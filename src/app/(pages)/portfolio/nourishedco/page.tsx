@@ -15,7 +15,10 @@ const Portfolio = () => {
                     alt="Nourished Co"
                 />
                 <p>I am currently in the process of migrating our site from Squarespace to Next.js. This is a work in progress!</p>
-                <p>This project is a recreation of the <StyledLink url="https://nourishedfood.co" title="nourishedfood.co" /> website. View the code for the next.js project <StyledLink url="https://github.com/jamie-c/nourished" title="on GitHub" />. The current version that the domain points to is a squarespace site.</p>
+                <p>This project is a recreation of the <StyledLink url="https://nourishedfood.co" title="nourishedfood.co" /> website. 
+                View the in-progress site here <StyledLink url="https://nourished.vercel.app" title="nourished.vercel.app" />. 
+                View the code for the next.js project <StyledLink url="https://github.com/jamie-c/nourished" title="on GitHub" />. 
+                The current version that the domain points to is a squarespace site.</p>
                 <p>The next.js version will eventually be deployed and replace the current squarespace site.</p>
             </div>
         </div>

@@ -11,7 +11,7 @@ const LandingPage = () => {
             <div className="w-full flex flex-row justify-start text-lg">
                 <p>
                     <b>Member of the Spring 2023</b> <StyledLink url="https://www.okcoders.com/" title="OKCoders" /> <b>cohort</b>. 
-                    Current work experience at <StyledLink url="https://www.exaptive.com/" title="Exaptive" />. 
+                    Software engineer at <StyledLink url="https://www.nodecraft.com/" title="Nodecraft" />. 
                     Founding member of <StyledLink url="https://www.nourishedfood.co" title="Nourished Co" />. 
                     I built this site by using Node.js, React, Next.js, Tailwind CSS, and JavaScript/TypeScript.
                 </p>

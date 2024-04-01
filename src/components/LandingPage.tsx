@@ -10,9 +10,9 @@ const LandingPage = () => {
             </div>
             <div className="w-full flex flex-row justify-start text-lg">
                 <p>
-                    <b>Member of the Spring 2023</b> <StyledLink url="https://www.okcoders.com/" title="OKCoders" /> <b>cohort</b>. 
-                    Software engineer at <StyledLink url="https://www.nodecraft.com/" title="Nodecraft" />. 
+                    <b>Software engineer at <StyledLink url="https://www.nodecraft.com/" title="Nodecraft" /></b>. 
                     Founding member of <StyledLink url="https://www.nourishedfood.co" title="Nourished Co" />. 
+                    Member of the Spring 2023 <StyledLink url="https://www.okcoders.com/" title="OKCoders" /> cohort. 
                     I built this site by using Node.js, React, Next.js, Tailwind CSS, and JavaScript/TypeScript.
                 </p>
             </div>

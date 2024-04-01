@@ -11,6 +11,13 @@ const Skills = () => {
 
     const skillImages = [
         {
+            title: 'Fullstack Developer',
+            linkTo: 'https://www.okcoders.com/',
+            fileName: 'okcoders.png',
+            profileTitle: 'OK Coders',
+            profileUrl: 'https://www.okcoders.com/',
+        },
+        {
             title: 'Backend Development and APIs - Free Code Camp',
             linkTo: freeCodeCampProfileUrl,
             fileName: 'BackendDevelopmentAndAPIsCert-FreeCodeCamp.jpg',

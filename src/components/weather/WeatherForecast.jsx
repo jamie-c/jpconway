@@ -1,73 +1,66 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react';
-import DayCard from './DayCard';
-import { getForecast } from '@/app/(pages)/weather/getWeatherForecast';
+import { getForecast } from "@/app/(pages)/weather/getWeatherForecast";
+import { useEffect, useState } from "react";
+import DayCard from "./DayCard";
 
 const WeatherForecast = ({ api_key }) => {
-
-	const [zipCode, setZipCode] = useState(null);
+	const [zipCode, setZipCode] = useState("");
 	const [forecastData, setForecastData] = useState([]);
-	const [loading, setLoading] = useState('');
-	const [loadingMsg, setLoadingMsg] = useState('');
+	const [loading, setLoading] = useState("");
+	const [loadingMsg, setLoadingMsg] = useState("");
 	const url = `https://api.weatherapi.com/v1/forecast.json?key=${api_key}&q=${zipCode}&days=3&aqi=no&alerts=no`;
 
 	const getResponse = () => {
-		setLoading('loading');
+		setLoading("loading");
 		if (zipCode) {
 			getForecast(url)
-			.then((data) => { 
-				setForecastData(data)
-			})
-			.catch(e => 'there was an error getting the data')
-			.finally(setLoading('loaded'));
+				.then((data) => {
+					setForecastData(data);
+				})
+				.catch((e) => "there was an error getting the data")
+				.finally(setLoading("loaded"));
 		}
-	}
+	};
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		getResponse();
-	}
+	};
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
 	useEffect(() => {
 		switch (loading) {
-			case 'loading':
-				setLoadingMsg((<div>Getting weather forecast for {zipCode}.</div>));
+			case "loading":
+				setLoadingMsg(<div>Getting weather forecast for {zipCode}.</div>);
 				break;
-			case 'entering zip':
-				setLoadingMsg((<div>Please enter a zip code...</div>));
+			case "entering zip":
+				setLoadingMsg(<div>Please enter a zip code...</div>);
 				break;
-			case 'loaded':
-				setLoadingMsg((<div>Weather forecast for {zipCode}:</div>));
+			case "loaded":
+				setLoadingMsg(<div>Weather forecast for {zipCode}:</div>);
 				break;
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [loading]);
 
-
 	return (
-		<div
-			className='flex flex-col m-auto'
-        >
-			<form
-				className='my-5'
-				onSubmit={handleSubmit}
-			>
-				<label 
-            	    htmlFor="zipCode"
-            	>Zip Code</label>
+		<div className="flex flex-col m-auto">
+			<form className="my-5" onSubmit={handleSubmit}>
+				<label htmlFor="zipCode">Zip Code</label>
 				<input
 					className="p-2 rounded-md border-2 border-tricornBlack-600 text-tricornBlack-500"
 					name="zipCode"
 					type="number"
 					placeholder="Enter your Zip Code"
 					value={zipCode}
-					onChange={e => {
-						setLoading('entering zip');
+					onChange={(e) => {
+						setLoading("entering zip");
 						setZipCode(e.target.value);
 					}}
 					style={{
-						width: '100%',
-						margin: '10px 0'
+						width: "100%",
+						margin: "10px 0",
 					}}
 				/>
 			</form>
@@ -75,19 +68,19 @@ const WeatherForecast = ({ api_key }) => {
 			{loadingMsg}
 
 			{/* build the DayCard with the forecastData */}
-			{forecastData.map(({ date, day: { condition, maxtemp_f, mintemp_f }, hour }) => {
+			{forecastData.map(
+				({ date, day: { condition, maxtemp_f, mintemp_f }, hour }) => {
+					const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]; // days of week 0-6
+					const todayNum = new Date().getDay(); // returns number 0-6 Sun-Sat for current day
 
-				const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] // days of week 0-6
-			    const todayNum = new Date().getDay();  // returns number 0-6 Sun-Sat for current day
+					const [fcYear, fcMonth, fcDay] = date.split("-");
+					const fcDayObject = new Date(fcYear, fcMonth - 1, fcDay); // month - 1 since month indices start from 0
 
-				const [fcYear, fcMonth, fcDay] = date.split("-");
-				const fcDayObject = new Date(fcYear, fcMonth - 1, fcDay); // month - 1 since month indices start from 0
+					const fcDayNum = fcDayObject.getDay(); // returns number 0-6 Sun-Sat for forecast day
+					daysOfWeek[todayNum] = "Today"; // rename day at index value of current day to Today
+					const dayOfWeek = daysOfWeek[fcDayNum]; // get name of forecast day from array
 
-			    const fcDayNum = fcDayObject.getDay();  // returns number 0-6 Sun-Sat for forecast day
-			    daysOfWeek[todayNum] = 'Today';  // rename day at index value of current day to Today
-			    const dayOfWeek = daysOfWeek[fcDayNum];  // get name of forecast day from array
-
-				return (
+					return (
 						<DayCard
 							key={dayOfWeek}
 							date={dayOfWeek}
@@ -97,9 +90,9 @@ const WeatherForecast = ({ api_key }) => {
 							lowTemp={mintemp_f}
 							hour={hour}
 						/>
-				)
-			})}
-			
+					);
+				},
+			)}
 		</div>
 	);
 };

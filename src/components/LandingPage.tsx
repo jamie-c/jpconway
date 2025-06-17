@@ -10,7 +10,7 @@ const LandingPage = () => {
             </div>
             <div className="w-full flex flex-row justify-start text-lg">
                 <p>
-                    <b>Software engineer.</b>. Founding member of{" "}
+                    <b>Software engineer</b>. Founding member of{" "}
                     <StyledLink
                         url="https://www.nourishedfood.co"
                         title="Nourished Co"
